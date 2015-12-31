@@ -1,0 +1,17 @@
+################################################################
+# Makefile
+#
+# Copyright 2015 hbwoo
+#
+#  This file is part of TrustKeystoreAgent
+
+CC = cc
+CFLAGS = -O -Xa -xCC
+
+TARGET = built-in.o
+OBJS = TestAgent.o
+all : $(OBJS)	
+	$(LD) -r $(OBJS) -o $(TARGET)
+
+clean :
+	rm -rf *.o $(TARGET)

@@ -1,0 +1,58 @@
+################################################################
+# Makefile
+#
+# Copyright 2015 hbwoo
+#
+#  This file is part of TrustKeystoreAgent
+
+CFLAGS = -I../../ -fPIC -DHAVE_CONFIG_H -DSINGLE_THREADED -q64 -qmaxmem=16396 -qcpluscmt -qalign=power -qenum=int
+LD = ld -b64
+
+TARGET = built-in.o
+OBJS = integer.o \
+				poly1305.o \
+				arc4.o \
+				misc.o \
+				pkcs7.o \
+				logging.o \
+				rsa.o \
+				asm.o \
+				random.o \
+				ecc_fp.o \
+				wc_port.o \
+				dsa.o \
+				rabbit.o \
+				ed25519.o \
+				ge_operations.o \
+				chacha20_poly1305.o \
+				ecc.o \
+				hc128.o \
+				md2.o \
+				md4.o \
+				sha.o \
+				sha256.o \
+				sha512.o \
+				blake2b.o \
+				asn.o \
+				curve25519.o \
+				ripemd.o \
+				aes.o \
+				memory.o \
+				camellia.o \
+				chacha.o \
+				coding.o \
+				des3.o \
+				fe_operations.o \
+				compress.o \
+				dh.o \
+				error.o \
+				pwdbased.o \
+				md5.o \
+				tfm.o \
+				hmac.o
+					
+all : $(OBJS)	
+	$(LD) -r $(OBJS) -o $(TARGET)
+
+clean :
+	rm -rf *.o $(TARGET)

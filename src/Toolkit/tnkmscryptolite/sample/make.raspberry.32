@@ -1,0 +1,31 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for test.c
+#
+#	 Creadted by DEV3
+#
+#************************************************
+
+CC = gcc
+CFLAG = 
+INCLUDE = -I./ -I../include
+
+CP = cp
+OUT = test
+RM = rm
+
+CFLAGS = $(INCLUDE) $(CFLAG)
+
+all : banner exe 
+
+banner :
+	echo Testing $(OUT).c
+
+exe : 
+	$(CC) -c $(OUT).c $(INCLUDE) 
+	$(CC) -ldl -o $(OUT) $(OUT).o ../lib/libtnkmscryptolite.so
+
+clean :
+	$(RM) *.o
+	$(RM) $(OUT)

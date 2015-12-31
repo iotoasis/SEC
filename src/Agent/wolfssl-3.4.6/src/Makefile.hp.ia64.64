@@ -1,0 +1,25 @@
+################################################################
+# Makefile
+#
+# Copyright 2015 hbwoo
+#
+#  This file is part of TrustKeystoreAgent
+
+CC = cc +DD64
+CFLAGS = -I../ -DHAVE_CONFIG_H -O -Dhpux -D_HPUX_SOURCE -Wl,+s+b
+
+TARGET = built-in.o
+OBJS = crl.o \
+				internal.o \
+				io.o \
+				keys.o \
+				ocsp.o \
+				sniffer.o \
+				ssl.o \
+				tls.o
+
+all : $(OBJS)	
+	$(LD) -r $(OBJS) -o $(TARGET)
+
+clean :
+	rm -rf *.o $(TARGET)

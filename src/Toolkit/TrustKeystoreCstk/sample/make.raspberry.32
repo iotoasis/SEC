@@ -1,0 +1,50 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for test.c
+#
+#	 Creadted by DEV3
+#
+#************************************************
+
+CC = gcc
+CFLAG = 
+INCLUDE = -I./ -I../ -I../lib
+
+CP = cp
+OUT1 = TestTKSCstk
+OUT2 = TestTKSCstkLite
+OUT3 = TestTKSKmsCstk
+OUT4 = TestTKSKmsCstkLite
+RM = rm
+
+CFLAGS = $(INCLUDE) $(CFLAG)vi
+
+all : testcstk testcstklite testcskmstk testcskmstklite	
+	
+testcstk : 
+	echo Testing $(OUT1).c
+	$(CC) -c $(OUT1).c $(INCLUDE) 
+	$(CC) -ldl -o $(OUT1) $(OUT1).o -L../lib -lTKSAgentLite -ltnkmscrypto -lTKSCstk
+
+testcstklite : 
+	echo Testing $(OUT2).c
+	$(CC) -c $(OUT2).c $(INCLUDE) 
+	$(CC) -ldl -o $(OUT2) $(OUT2).o -L../lib -lTKSAgentLite -ltnkmscryptolite -lTKSCstkLite
+
+testcskmstk : 
+	echo Testing $(OUT3).c
+	$(CC) -c $(OUT3).c $(INCLUDE) 
+	$(CC) -ldl -o $(OUT3) $(OUT3).o -L../lib -lTKSAgentAdv -ltnkmscrypto -lTKSKmsCstk
+	
+testcskmstklite : 
+	echo Testing $(OUT4).c
+	$(CC) -c $(OUT4).c $(INCLUDE) 
+	$(CC) -ldl -o $(OUT4) $(OUT4).o -L../lib -lTKSAgent -ltnkmscryptolite -lTKSKmsCstkLite
+
+clean :
+	$(RM) *.o
+	$(RM) $(OUT1)
+	$(RM) $(OUT2)
+	$(RM) $(OUT3)
+	$(RM) $(OUT4)	

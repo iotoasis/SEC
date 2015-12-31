@@ -1,0 +1,26 @@
+################################################################
+# Makefile
+#
+# Copyright 2015 hbwoo
+#
+#  This file is part of TrustKeystoreAgent
+
+
+CFLAGS = -I../ -fPIC -DHAVE_CONFIG_H -q64 -qmaxmem=16396 -qcpluscmt -qalign=power -qenum=int
+LD = ld -b64
+
+TARGET = built-in.o
+OBJS = crl.o \
+				internal.o \
+				io.o \
+				keys.o \
+				ocsp.o \
+				sniffer.o \
+				ssl.o \
+				tls.o
+
+all : $(OBJS)	
+	$(LD) -r $(OBJS) -o $(TARGET)
+
+clean :
+	rm -rf *.o $(TARGET)

@@ -1,0 +1,66 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for TrustKeystoreCstk
+#
+#	 Creadted by DEV3
+#
+#************************************************	
+	
+CC = /root/dev/buildroot-gcc342/bin/mipsel-linux-gcc -fPIC
+CFLAG = -O -D_REENTRANT -DL_ENDIAN -D_UNIX -D_USE_POLL_ -DTN_LINUX
+AR = /root/dev/buildroot-gcc342/bin/mipsel-linux-ar
+LD = /root/dev/buildroot-gcc342/bin/mipsel-linux-ld
+LIBDIR= ./lib_gw
+
+INCLUDE = -I../include -I.. -I../tnkmscrypto/include/ -I../tnkmscryptolite/include/ -I../TrustKeystoreAgent/TrustKeystoreAgent/
+
+LIBRARY = -lc -lm -lpthread -m elf32ltsmip
+
+CFLAGS = $(INCLUDE) $(CFLAG)
+
+all : tkscstk tkscstklite tkskmscstk tkskmscstklite
+
+tkscstk :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DDEVICE_MODE_TKS_CSTK
+	$(AR) r libTKSCstk.a TrustKeystoreCstk.o
+	$(LD) -shared -o libTKSCstk.so TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSCstk.a ${LIBDIR}
+	mv libTKSCstk.so ${LIBDIR}
+	
+tkscstklite :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DDEVICE_MODE_TKS_CSTK -DLIGHTWEIGHT_TKS_CSTK
+	$(AR) r libTKSCstkLite.a TrustKeystoreCstk.o
+	$(LD) -shared -o libTKSCstkLite.so TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSCstkLite.a ${LIBDIR}
+	mv libTKSCstkLite.so ${LIBDIR}	
+	
+tkskmscstk :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DGATEWAY_MODE_TKS_CSTK
+	$(AR) r libTKSKmsCstk.a TrustKeystoreCstk.o
+	$(LD) -shared -o libTKSKmsCstk.so TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSKmsCstk.a ${LIBDIR}
+	mv libTKSKmsCstk.so ${LIBDIR}	
+
+tkskmscstklite :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DGATEWAY_MODE_TKS_CSTK -DLIGHTWEIGHT_TKS_CSTK
+	$(AR) r libTKSKmsCstkLite.a TrustKeystoreCstk.o
+	$(LD) -shared -o libTKSKmsCstkLite.so TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSKmsCstkLite.a ${LIBDIR}
+	mv libTKSKmsCstkLite.so ${LIBDIR}		
+
+clean :
+	rm TrustKeystoreCstk.o
+	rm ${LIBDIR}/libTKSCstk.so	
+	rm ${LIBDIR}/libTKSCstkLite.so	
+	rm ${LIBDIR}/libTKSKmsCstk.so	
+	rm ${LIBDIR}/libTKSKmsCstkLite.so	
+	rm ${LIBDIR}/libTKSCstk.a	
+	rm ${LIBDIR}/libTKSCstkLite.a	
+	rm ${LIBDIR}/libTKSKmsCstk.a	
+	rm ${LIBDIR}/libTKSKmsCstkLite.a		
+
