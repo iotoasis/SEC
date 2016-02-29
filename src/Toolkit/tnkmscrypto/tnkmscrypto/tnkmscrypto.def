@@ -1,0 +1,16 @@
+; tnkmscrypto.def : Declares the module parameters for the DLL.
+
+LIBRARY      "tnkmscrypto"
+DESCRIPTION  'tnkmscrypto Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	TCL_Block_Encrypt					@600
+	TCL_Block_Decrypt					@601
+	TCL_Digest							@602
+	TCL_HMAC							@603
+	TCL_GenerateRandom					@604
+	TCL_GetErrorCode					@605
+
+
+

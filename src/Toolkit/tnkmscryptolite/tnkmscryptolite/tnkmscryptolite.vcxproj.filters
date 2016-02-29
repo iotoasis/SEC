@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\BLOCK_C">
+      <UniqueIdentifier>{f425c7c7-af29-4da8-8aa9-88a438deac8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HASH_C">
+      <UniqueIdentifier>{08290e9d-1856-42ee-9ef1-51fa7ae7e8ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\RAND_C">
+      <UniqueIdentifier>{d53fd5c9-deaa-48f6-aad8-14ab7804cf30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SCRT_C">
+      <UniqueIdentifier>{a18d0ebc-235f-4054-aeca-37777c03ce2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TCL_C">
+      <UniqueIdentifier>{6593390e-9f38-414c-a00e-846003ee469d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\error.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lea.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lsh256.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rand.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt_error.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt_object.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\type.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\typeconvert.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnkmscryptolite.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="block\lea.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\lsh256.c">
+      <Filter>소스 파일\HASH_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_lsh256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_null.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_digest.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_enc.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_rand.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="rand\rand.c">
+      <Filter>소스 파일\RAND_C</Filter>
+    </ClCompile>
+    <ClCompile Include="rand\rand_lsh256.c">
+      <Filter>소스 파일\RAND_C</Filter>
+    </ClCompile>
+    <ClCompile Include="tcl\tnkmscryptolite.c">
+      <Filter>소스 파일\TCL_C</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tnkmscryptolite.def">
+      <Filter>소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tnkmscryptolite.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

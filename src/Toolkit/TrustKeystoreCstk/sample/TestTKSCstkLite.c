@@ -188,7 +188,7 @@ int TKSCstkLite_init(void **ppCtx, char* szPath)
 void TKSCstkLite_final(void **ppCtx)
 {
 	printf("\nTest for TrustKeystoreTK_Final...start\n");
-	TrustKeystoreTK_Final(ppCtx);
+	if(*ppCtx != NULL) TrustKeystoreTK_Final(ppCtx);
 } 
 
 int TKSCstkLite_SetKey(void *pCtx, unsigned char  *pIn, int nInLen)

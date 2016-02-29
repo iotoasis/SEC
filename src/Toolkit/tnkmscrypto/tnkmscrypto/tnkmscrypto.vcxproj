@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1821A476-3440-4D47-B547-CD5D00E9F0EB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tnkmscrypto</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TNKMSCRYPTO_EXPORTS;_LEA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>tnkmscrypto.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TNKMSCRYPTO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>tnkmscrypto.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TNKMSCRYPTO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>tnkmscrypto.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TNKMSCRYPTO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>tnkmscrypto.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\aes.h" />
+    <ClInclude Include="include\aria.h" />
+    <ClInclude Include="include\error.h" />
+    <ClInclude Include="include\hmac.h" />
+    <ClInclude Include="include\lea.h" />
+    <ClInclude Include="include\lsh256.h" />
+    <ClInclude Include="include\lsh512.h" />
+    <ClInclude Include="include\rand.h" />
+    <ClInclude Include="include\scrt.h" />
+    <ClInclude Include="include\scrt_error.h" />
+    <ClInclude Include="include\scrt_object.h" />
+    <ClInclude Include="include\seed.h" />
+    <ClInclude Include="include\seed256.h" />
+    <ClInclude Include="include\sha256.h" />
+    <ClInclude Include="include\sha512.h" />
+    <ClInclude Include="include\tnkmscrypto.h" />
+    <ClInclude Include="include\type.h" />
+    <ClInclude Include="include\typeconvert.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="block\aes.c" />
+    <ClCompile Include="block\aes_cbc.c" />
+    <ClCompile Include="block\aes_cfb.c" />
+    <ClCompile Include="block\aes_ctr.c" />
+    <ClCompile Include="block\aes_ecb.c" />
+    <ClCompile Include="block\aes_ofb.c" />
+    <ClCompile Include="block\aria.c" />
+    <ClCompile Include="block\aria_cbc.c" />
+    <ClCompile Include="block\aria_cfb.c" />
+    <ClCompile Include="block\aria_ctr.c" />
+    <ClCompile Include="block\aria_ecb.c" />
+    <ClCompile Include="block\aria_ofb.c" />
+    <ClCompile Include="block\lea.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_LEA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="block\lea_cbc.c" />
+    <ClCompile Include="block\lea_cfb.c" />
+    <ClCompile Include="block\lea_ctr.c" />
+    <ClCompile Include="block\lea_ecb.c" />
+    <ClCompile Include="block\lea_ofb.c" />
+    <ClCompile Include="block\seed.c" />
+    <ClCompile Include="block\seed256.c" />
+    <ClCompile Include="block\seed256_cbc.c" />
+    <ClCompile Include="block\seed256_cfb.c" />
+    <ClCompile Include="block\seed256_ctr.c" />
+    <ClCompile Include="block\seed256_ecb.c" />
+    <ClCompile Include="block\seed256_ofb.c" />
+    <ClCompile Include="block\seed_cbc.c" />
+    <ClCompile Include="block\seed_cfb.c" />
+    <ClCompile Include="block\seed_ctr.c" />
+    <ClCompile Include="block\seed_ecb.c" />
+    <ClCompile Include="block\seed_ofb.c" />
+    <ClCompile Include="hash\lsh256.c" />
+    <ClCompile Include="hash\lsh512.c" />
+    <ClCompile Include="hash\sha256.c" />
+    <ClCompile Include="hash\sha512.c" />
+    <ClCompile Include="mac\hash_mac.c" />
+    <ClCompile Include="rand\rand.c" />
+    <ClCompile Include="rand\rand_sha256.c" />
+    <ClCompile Include="scrt\e_cbc_aes.c" />
+    <ClCompile Include="scrt\e_cbc_aria.c" />
+    <ClCompile Include="scrt\e_cbc_lea.c" />
+    <ClCompile Include="scrt\e_cbc_s.c" />
+    <ClCompile Include="scrt\e_cbc_s256.c" />
+    <ClCompile Include="scrt\e_cfb_aes.c" />
+    <ClCompile Include="scrt\e_cfb_aria.c" />
+    <ClCompile Include="scrt\e_cfb_lea.c" />
+    <ClCompile Include="scrt\e_cfb_s.c" />
+    <ClCompile Include="scrt\e_cfb_s256.c" />
+    <ClCompile Include="scrt\e_ctr_aes.c" />
+    <ClCompile Include="scrt\e_ctr_aria.c" />
+    <ClCompile Include="scrt\e_ctr_lea.c" />
+    <ClCompile Include="scrt\e_ctr_s.c" />
+    <ClCompile Include="scrt\e_ctr_s256.c" />
+    <ClCompile Include="scrt\e_ecb_aes.c" />
+    <ClCompile Include="scrt\e_ecb_aria.c" />
+    <ClCompile Include="scrt\e_ecb_lea.c" />
+    <ClCompile Include="scrt\e_ecb_s.c" />
+    <ClCompile Include="scrt\e_ecb_s256.c" />
+    <ClCompile Include="scrt\e_ofb_aes.c" />
+    <ClCompile Include="scrt\e_ofb_aria.c" />
+    <ClCompile Include="scrt\e_ofb_lea.c" />
+    <ClCompile Include="scrt\e_ofb_s.c" />
+    <ClCompile Include="scrt\e_ofb_s256.c" />
+    <ClCompile Include="scrt\m_lsh256.c" />
+    <ClCompile Include="scrt\m_lsh512.c" />
+    <ClCompile Include="scrt\m_null.c" />
+    <ClCompile Include="scrt\m_sha256.c" />
+    <ClCompile Include="scrt\m_sha512.c" />
+    <ClCompile Include="scrt\scrt_digest.c" />
+    <ClCompile Include="scrt\scrt_enc.c" />
+    <ClCompile Include="scrt\scrt_mac.c" />
+    <ClCompile Include="scrt\scrt_rand.c" />
+    <ClCompile Include="tcl\tnkmscrypto.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tnkmscrypto.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tnkmscrypto.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+; tnkmscryptolite.def : Declares the module parameters for the DLL.
+
+LIBRARY      "tnkmscryptolite"
+DESCRIPTION  'tnkmscryptolite Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	TCL_Block_Encrypt					@700
+	TCL_Block_Decrypt					@701
+	TCL_Digest							@702
+	TCL_GenerateRandom					@704
+	TCL_GetErrorCode					@705
+
+
+

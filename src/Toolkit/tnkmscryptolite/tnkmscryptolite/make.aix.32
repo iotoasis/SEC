@@ -1,0 +1,123 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for tnkmscrypto
+#
+#	 Creadted by DEV3
+#
+#************************************************
+
+CC = cc -q32 -qmaxmem=16396 -qcpluscmt -qalign=power -qenum=int
+CFLAG = -O -D_REENTRANT -D_USE_POLL_ -DLSH_BIG_ENDIAN -DLEA_BIG_ENDIAN
+INCLUDES = -I../include -I..
+
+CP = cp
+
+RM = rm
+
+CFLAGS= $(INCLUDES) $(CFLAG) 
+
+LIBDIR= ./lib
+
+SCRT_D = ./scrt
+BLOCK_D = ./block
+HASH_D = ./hash
+RAND_D = ./rand
+TCL_D = ./tcl
+
+LIBOBJS = $(OBJSCRT) $(OBJBLOCK) $(OBJHASH) \
+$(OBJRAND) $(OBJTCL)
+
+# object file
+
+
+#all: banner lib remove
+all: banner lib
+
+banner : 
+	echo Building tnkmscrypto Library
+
+remove :
+	$(RM) *.o
+	
+$(SCRT_D)/e_cfb_lea.o: $(SCRT_D)/e_cfb_lea.c
+	$(CC) -c $(SCRT_D)/e_cfb_lea.c $(CFLAGS)
+	$(CP) e_cfb_lea.o $(SCRT_D)	
+
+$(SCRT_D)/m_null.o  : $(SCRT_D)/m_null.c 
+	$(CC) -c $(SCRT_D)/m_null.c $(CFLAGS)
+	$(CP) m_null.o $(SCRT_D)
+$(SCRT_D)/m_lsh256.o : $(SCRT_D)/m_lsh256.c
+	$(CC) -c $(SCRT_D)/m_lsh256.c $(CFLAGS)
+	$(CP) m_lsh256.o $(SCRT_D)
+	
+$(SCRT_D)/scrt_enc.o : $(SCRT_D)/scrt_enc.c 
+	$(CC) -c $(SCRT_D)/scrt_enc.c $(CFLAGS)
+	$(CP) scrt_enc.o $(SCRT_D)
+$(SCRT_D)/scrt_rand.o: $(SCRT_D)/scrt_rand.c
+	$(CC) -c $(SCRT_D)/scrt_rand.c $(CFLAGS)
+	$(CP) scrt_rand.o $(SCRT_D)
+$(SCRT_D)/scrt_digest.o: $(SCRT_D)/scrt_digest.c
+	$(CC) -c $(SCRT_D)/scrt_digest.c $(CFLAGS)
+	$(CP) scrt_digest.o $(SCRT_D)
+		
+$(BLOCK_D)/lea_cfb.o : $(BLOCK_D)/lea_cfb.c
+	$(CC) -c $(BLOCK_D)/lea_cfb.c $(CFLAGS)
+	$(CP) lea_cfb.o $(BLOCK_D)								
+$(BLOCK_D)/lea.o : $(BLOCK_D)/lea.c
+	$(CC) -c $(BLOCK_D)/lea.c $(CFLAGS)
+	$(CP) lea.o $(BLOCK_D)		
+
+$(HASH_D)/lsh256.o : $(HASH_D)/lsh256.c
+	$(CC) -c $(HASH_D)/lsh256.c $(CFLAGS)
+	$(CP) lsh256.o $(HASH_D)
+
+$(RAND_D)/rand.o : $(RAND_D)/rand.c
+	$(CC) -c $(RAND_D)/rand.c $(CFLAGS)
+	$(CP) rand.o $(RAND_D)
+$(RAND_D)/rand_lsh256.o : $(RAND_D)/rand_lsh256.c 
+	$(CC) -c $(RAND_D)/rand_lsh256.c $(CFLAGS)
+	$(CP) rand_lsh256.o $(RAND_D)
+			
+$(TCL_D)/tnkmscryptolite.o : $(TCL_D)/tnkmscryptolite.c
+	$(CC) -c $(TCL_D)/tnkmscryptolite.c $(CFLAGS)
+	$(CP) tnkmscryptolite.o $(TCL_D)			
+
+OBJSCRT = \
+$(SCRT_D)/e_cfb_lea.o \
+$(SCRT_D)/m_null.o \
+$(SCRT_D)/m_lsh256.o \
+$(SCRT_D)/scrt_digest.o \
+$(SCRT_D)/scrt_enc.o \
+$(SCRT_D)/scrt_rand.o 
+
+OBJBLOCK = \
+$(BLOCK_D)/lea.o \
+$(BLOCK_D)/lea_cfb.o
+
+OBJHASH = \
+$(HASH_D)/lsh256.o
+
+OBJRAND = \
+$(RAND_D)/rand.o \
+$(RAND_D)/rand_lsh256.o
+
+OBJTCL = \
+$(TCL_D)/tnkmscryptolite.o
+
+clean:
+	rm -f $/*.o
+	rm -f $(SCRT_D)/*.o 
+	rm -f $(BLOCK_D)/*.o
+	rm -f $(HASH_D)/*.o
+	rm -f $(RAND_D)/*.o
+	rm -f $(TCL_D)/*.o	
+	rm -f ${LIBDIR}/libtnkmscryptolite.a
+	rm -f ${LIBDIR}/libtnkmscryptolite.so
+
+lib:  ${LIBOBJS}
+	ar -X32 r ${LIBDIR}/libtnkmscryptolite.a $(LIBOBJS)
+	ld -b32 -G -o ${LIBDIR}/libtnkmscryptolite.so $(LIBOBJS) -bnoentry -bexpall -lc -lpthread
+	rm ./*.o	
+	
+

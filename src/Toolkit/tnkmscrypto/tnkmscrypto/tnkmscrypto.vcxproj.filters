@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\BLOCK_C">
+      <UniqueIdentifier>{9993a94f-02e5-4232-8594-6327a299fad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\HASH_C">
+      <UniqueIdentifier>{8f0a0230-e9bd-4509-80c7-c0f8d3173e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\MAC_C">
+      <UniqueIdentifier>{1956a5eb-61d5-4011-a4d9-c0b4b2882ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\RAND_C">
+      <UniqueIdentifier>{219b3724-d80d-431b-90a7-02172890a3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SCRT_C">
+      <UniqueIdentifier>{3e6ea97f-c810-4e20-bf38-f4ddd95dee2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TCL_C">
+      <UniqueIdentifier>{e4ed3428-3b88-4859-9e6f-7451caab3c56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\aes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aria.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\error.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hmac.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lea.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lsh256.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lsh512.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rand.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt_error.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scrt_object.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seed.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\seed256.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha256.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sha512.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tnkmscrypto.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\type.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\typeconvert.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="block\aes.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aes_cbc.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aes_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aes_ctr.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aes_ecb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aes_ofb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria_cbc.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria_ctr.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria_ecb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\aria_ofb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_cbc.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_ctr.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_ecb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\lea_ofb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed_cbc.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed_ctr.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed_ecb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed_ofb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256_cbc.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256_cfb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256_ctr.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256_ecb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="block\seed256_ofb.c">
+      <Filter>소스 파일\BLOCK_C</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\lsh256.c">
+      <Filter>소스 파일\HASH_C</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\lsh512.c">
+      <Filter>소스 파일\HASH_C</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\sha256.c">
+      <Filter>소스 파일\HASH_C</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\sha512.c">
+      <Filter>소스 파일\HASH_C</Filter>
+    </ClCompile>
+    <ClCompile Include="mac\hash_mac.c">
+      <Filter>소스 파일\MAC_C</Filter>
+    </ClCompile>
+    <ClCompile Include="tcl\tnkmscrypto.c">
+      <Filter>소스 파일\TCL_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cbc_aes.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cbc_aria.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cbc_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cbc_s.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cbc_s256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_aes.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_aria.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_s.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_cfb_s256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ctr_aes.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ctr_aria.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ctr_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ctr_s.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ctr_s256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ecb_aes.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ecb_aria.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ecb_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ecb_s.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ecb_s256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ofb_aes.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ofb_aria.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ofb_lea.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ofb_s.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\e_ofb_s256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_lsh256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_lsh512.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_null.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_sha256.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\m_sha512.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_digest.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_enc.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_mac.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="scrt\scrt_rand.c">
+      <Filter>소스 파일\SCRT_C</Filter>
+    </ClCompile>
+    <ClCompile Include="rand\rand.c">
+      <Filter>소스 파일\RAND_C</Filter>
+    </ClCompile>
+    <ClCompile Include="rand\rand_sha256.c">
+      <Filter>소스 파일\RAND_C</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tnkmscrypto.def">
+      <Filter>소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tnkmscrypto.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

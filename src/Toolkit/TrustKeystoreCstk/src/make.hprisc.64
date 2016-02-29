@@ -1,0 +1,63 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for TrustKeystoreCstk
+#
+#	 Creadted by DEV3
+#
+#************************************************	
+
+CC = cc +z -Ae +DA2.0W -Wl,+s
+CFLAG = -O
+
+INCLUDE = -I../include -I.. -I../tnkmscrypto/include/ -I../tnkmscryptolite/include/ -I../TrustKeystoreAgent/TrustKeystoreAgent/
+
+LIBRARY = -lc -lm -lpthread
+
+CFLAGS = $(INCLUDE) $(CFLAG)
+
+all : tkscstk tkscstklite tkskmscstk tkskmscstklite
+
+tkscstk :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DDEVICE_MODE_TKS_CSTK
+	ar r libTKSCstk.a TrustKeystoreCstk.o
+	ld -b -o libTKSCstk.sl TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSCstk.a ./lib
+	mv libTKSCstk.sl ./lib
+	
+tkscstklite :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DDEVICE_MODE_TKS_CSTK -DLIGHTWEIGHT_TKS_CSTK
+	ar r libTKSCstkLite.a TrustKeystoreCstk.o
+	ld -b -o libTKSCstkLite.sl TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSCstkLite.a ./lib
+	mv libTKSCstkLite.sl ./lib	
+	
+tkskmscstk :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DGATEWAY_MODE_TKS_CSTK
+	ar r libTKSKmsCstk.a TrustKeystoreCstk.o
+	ld -b -o libTKSKmsCstk.sl TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSKmsCstk.a ./lib
+	mv libTKSKmsCstk.sl ./lib	
+
+tkskmscstklite :
+	rm -f $/*.o
+	$(CC) -c TrustKeystoreCstk.c $(CFLAGS) -DGATEWAY_MODE_TKS_CSTK -DLIGHTWEIGHT_TKS_CSTK
+	ar r libTKSKmsCstkLite.a TrustKeystoreCstk.o
+	ld -b -o libTKSKmsCstkLite.sl TrustKeystoreCstk.o $(LIBRARY)
+	mv libTKSKmsCstkLite.a ./lib
+	mv libTKSKmsCstkLite.sl ./lib		
+
+clean :
+	rm TrustKeystoreCstk.o
+	rm ./lib/libTKSCstk.sl	
+	rm ./lib/libTKSCstkLite.sl	
+	rm ./lib/libTKSKmsCstk.sl	
+	rm ./lib/libTKSKmsCstkLite.sl	
+	rm ./lib/libTKSCstk.a	
+	rm ./lib/libTKSCstkLite.a	
+	rm ./lib/libTKSKmsCstk.a	
+	rm ./lib/libTKSKmsCstkLite.a		
+

@@ -1,0 +1,377 @@
+#***********************************************
+#	 Copyright (C) 2015, UNETsystem
+# 
+#     makefile for tnkmscrypto
+#
+#	 Creadted by DEV3
+#
+#************************************************
+
+CC = gcc -m64 -fPIC
+#CFLAG = -O -D_REENTRANT -DL_ENDIAN -D_UNIX -D_USE_POLL_ -DTN_LINUX
+CFLAG = -O -g -D_REENTRANT -DL_ENDIAN -D_UNIX -D_USE_POLL_ -DTN_LINUX
+INCLUDES = -I../include -I..
+
+CP = cp
+
+RM = rm
+
+CFLAGS= $(INCLUDES) $(CFLAG) 
+
+LIBDIR= ./lib
+
+SCRT_D = ./scrt
+BLOCK_D = ./block
+HASH_D = ./hash
+MAC_D = ./mac
+RAND_D = ./rand
+TCL_D = ./tcl
+
+LIBOBJS = $(OBJSCRT) $(OBJBLOCK) $(OBJHASH) \
+$(OBJMAC) $(OBJRAND) $(OBJTCL)
+
+# object file
+
+
+#all: banner lib remove
+all: banner lib
+
+banner : 
+	echo Building tnkmscrypto Library
+
+remove :
+	$(RM) *.o
+
+$(SCRT_D)/e_cbc_aes.o : $(SCRT_D)/e_cbc_aes.c
+	$(CC) -c $(SCRT_D)/e_cbc_aes.c $(CFLAGS)
+	$(CP) e_cbc_aes.o $(SCRT_D)
+$(SCRT_D)/e_cfb_aes.o : $(SCRT_D)/e_cfb_aes.c
+	$(CC) -c $(SCRT_D)/e_cfb_aes.c $(CFLAGS)
+	$(CP) e_cfb_aes.o $(SCRT_D)
+$(SCRT_D)/e_ctr_aes.o : $(SCRT_D)/e_ctr_aes.c
+	$(CC) -c $(SCRT_D)/e_ctr_aes.c $(CFLAGS)
+	$(CP) e_ctr_aes.o $(SCRT_D)
+$(SCRT_D)/e_ecb_aes.o : $(SCRT_D)/e_ecb_aes.c
+	$(CC) -c $(SCRT_D)/e_ecb_aes.c $(CFLAGS)
+	$(CP) e_ecb_aes.o $(SCRT_D)
+$(SCRT_D)/e_ofb_aes.o : $(SCRT_D)/e_ofb_aes.c
+	$(CC) -c $(SCRT_D)/e_ofb_aes.c $(CFLAGS)
+	$(CP) e_ofb_aes.o $(SCRT_D)
+	
+$(SCRT_D)/e_cbc_aria.o: $(SCRT_D)/e_cbc_aria.c
+	$(CC) -c $(SCRT_D)/e_cbc_aria.c $(CFLAGS)
+	$(CP) e_cbc_aria.o $(SCRT_D)
+$(SCRT_D)/e_cfb_aria.o: $(SCRT_D)/e_cfb_aria.c
+	$(CC) -c $(SCRT_D)/e_cfb_aria.c $(CFLAGS)
+	$(CP) e_cfb_aria.o $(SCRT_D)	
+$(SCRT_D)/e_ctr_aria.o: $(SCRT_D)/e_ctr_aria.c
+	$(CC) -c $(SCRT_D)/e_ctr_aria.c $(CFLAGS)
+	$(CP) e_ctr_aria.o $(SCRT_D)	
+$(SCRT_D)/e_ecb_aria.o: $(SCRT_D)/e_ecb_aria.c
+	$(CC) -c $(SCRT_D)/e_ecb_aria.c $(CFLAGS)
+	$(CP) e_ecb_aria.o $(SCRT_D)		
+$(SCRT_D)/e_ofb_aria.o: $(SCRT_D)/e_ofb_aria.c
+	$(CC) -c $(SCRT_D)/e_ofb_aria.c $(CFLAGS)
+	$(CP) e_ofb_aria.o $(SCRT_D)
+	
+$(SCRT_D)/e_cbc_lea.o: $(SCRT_D)/e_cbc_lea.c
+	$(CC) -c $(SCRT_D)/e_cbc_lea.c $(CFLAGS)
+	$(CP) e_cbc_lea.o $(SCRT_D)
+$(SCRT_D)/e_cfb_lea.o: $(SCRT_D)/e_cfb_lea.c
+	$(CC) -c $(SCRT_D)/e_cfb_lea.c $(CFLAGS)
+	$(CP) e_cfb_lea.o $(SCRT_D)	
+$(SCRT_D)/e_ctr_lea.o: $(SCRT_D)/e_ctr_lea.c
+	$(CC) -c $(SCRT_D)/e_ctr_lea.c $(CFLAGS)
+	$(CP) e_ctr_lea.o $(SCRT_D)	
+$(SCRT_D)/e_ecb_lea.o: $(SCRT_D)/e_ecb_lea.c
+	$(CC) -c $(SCRT_D)/e_ecb_lea.c $(CFLAGS)
+	$(CP) e_ecb_lea.o $(SCRT_D)		
+$(SCRT_D)/e_ofb_lea.o: $(SCRT_D)/e_ofb_lea.c
+	$(CC) -c $(SCRT_D)/e_ofb_lea.c $(CFLAGS)
+	$(CP) e_ofb_lea.o $(SCRT_D)	
+
+$(SCRT_D)/e_cbc_s256.o : $(SCRT_D)/e_cbc_s256.c 
+	$(CC) -c $(SCRT_D)/e_cbc_s256.c $(CFLAGS)
+	$(CP) e_cbc_s256.o $(SCRT_D)	
+$(SCRT_D)/e_cfb_s256.o : $(SCRT_D)/e_cfb_s256.c 
+	$(CC) -c $(SCRT_D)/e_cfb_s256.c $(CFLAGS)
+	$(CP) e_cfb_s256.o $(SCRT_D)	
+$(SCRT_D)/e_ctr_s256.o : $(SCRT_D)/e_ctr_s256.c 
+	$(CC) -c $(SCRT_D)/e_ctr_s256.c $(CFLAGS)
+	$(CP) e_ctr_s256.o $(SCRT_D)	
+$(SCRT_D)/e_ecb_s256.o : $(SCRT_D)/e_ecb_s256.c 
+	$(CC) -c $(SCRT_D)/e_ecb_s256.c $(CFLAGS)
+	$(CP) e_ecb_s256.o $(SCRT_D)	
+$(SCRT_D)/e_ofb_s256.o : $(SCRT_D)/e_ofb_s256.c 
+	$(CC) -c $(SCRT_D)/e_ofb_s256.c $(CFLAGS)
+	$(CP) e_ofb_s256.o $(SCRT_D)
+
+$(SCRT_D)/e_cbc_s.o : $(SCRT_D)/e_cbc_s.c 
+	$(CC) -c $(SCRT_D)/e_cbc_s.c $(CFLAGS)
+	$(CP) e_cbc_s.o $(SCRT_D)
+$(SCRT_D)/e_cfb_s.o : $(SCRT_D)/e_cfb_s.c 
+	$(CC) -c $(SCRT_D)/e_cfb_s.c $(CFLAGS)
+	$(CP) e_cfb_s.o $(SCRT_D)
+$(SCRT_D)/e_ctr_s.o: $(SCRT_D)/e_ctr_s.c
+	$(CC) -c $(SCRT_D)/e_ctr_s.c $(CFLAGS)
+	$(CP) e_ctr_s.o $(SCRT_D)
+$(SCRT_D)/e_ecb_s.o  : $(SCRT_D)/e_ecb_s.c 
+	$(CC) -c $(SCRT_D)/e_ecb_s.c $(CFLAGS)
+	$(CP) e_ecb_s.o $(SCRT_D)
+$(SCRT_D)/e_ofb_s.o : $(SCRT_D)/e_ofb_s.c
+	$(CC) -c $(SCRT_D)/e_ofb_s.c $(CFLAGS)
+	$(CP) e_ofb_s.o $(SCRT_D)
+
+$(SCRT_D)/m_null.o  : $(SCRT_D)/m_null.c 
+	$(CC) -c $(SCRT_D)/m_null.c $(CFLAGS)
+	$(CP) m_null.o $(SCRT_D)
+$(SCRT_D)/m_lsh256.o : $(SCRT_D)/m_lsh256.c
+	$(CC) -c $(SCRT_D)/m_lsh256.c $(CFLAGS)
+	$(CP) m_lsh256.o $(SCRT_D)
+$(SCRT_D)/m_lsh512.o: $(SCRT_D)/m_lsh512.c
+	$(CC) -c $(SCRT_D)/m_lsh512.c $(CFLAGS)
+	$(CP) m_lsh512.o $(SCRT_D)	
+$(SCRT_D)/m_sha256.o : $(SCRT_D)/m_sha256.c
+	$(CC) -c $(SCRT_D)/m_sha256.c $(CFLAGS)
+	$(CP) m_sha256.o $(SCRT_D)
+$(SCRT_D)/m_sha512.o: $(SCRT_D)/m_sha512.c
+	$(CC) -c $(SCRT_D)/m_sha512.c $(CFLAGS)
+	$(CP) m_sha512.o $(SCRT_D)
+	
+$(SCRT_D)/scrt_enc.o : $(SCRT_D)/scrt_enc.c 
+	$(CC) -c $(SCRT_D)/scrt_enc.c $(CFLAGS)
+	$(CP) scrt_enc.o $(SCRT_D)
+$(SCRT_D)/scrt_mac.o : $(SCRT_D)/scrt_mac.c
+	$(CC) -c $(SCRT_D)/scrt_mac.c $(CFLAGS)
+	$(CP) scrt_mac.o $(SCRT_D)
+$(SCRT_D)/scrt_rand.o: $(SCRT_D)/scrt_rand.c
+	$(CC) -c $(SCRT_D)/scrt_rand.c $(CFLAGS)
+	$(CP) scrt_rand.o $(SCRT_D)
+$(SCRT_D)/scrt_digest.o: $(SCRT_D)/scrt_digest.c
+	$(CC) -c $(SCRT_D)/scrt_digest.c $(CFLAGS)
+	$(CP) scrt_digest.o $(SCRT_D)
+
+$(BLOCK_D)/aria_ofb.o : $(BLOCK_D)/aria_ofb.c
+	$(CC) -c $(BLOCK_D)/aria_ofb.c $(CFLAGS)
+	$(CP) aria_ofb.o $(BLOCK_D)	
+$(BLOCK_D)/aria_ecb.o : $(BLOCK_D)/aria_ecb.c
+	$(CC) -c $(BLOCK_D)/aria_ecb.c $(CFLAGS)
+	$(CP) aria_ecb.o $(BLOCK_D)		
+$(BLOCK_D)/aria_ctr.o : $(BLOCK_D)/aria_ctr.c
+	$(CC) -c $(BLOCK_D)/aria_ctr.c $(CFLAGS)
+	$(CP) aria_ctr.o $(BLOCK_D)			
+$(BLOCK_D)/aria_cfb.o : $(BLOCK_D)/aria_cfb.c
+	$(CC) -c $(BLOCK_D)/aria_cfb.c $(CFLAGS)
+	$(CP) aria_cfb.o $(BLOCK_D)				
+$(BLOCK_D)/aria_cbc.o : $(BLOCK_D)/aria_cbc.c
+	$(CC) -c $(BLOCK_D)/aria_cbc.c $(CFLAGS)
+	$(CP) aria_cbc.o $(BLOCK_D)					
+$(BLOCK_D)/aria.o : $(BLOCK_D)/aria.c
+	$(CC) -c $(BLOCK_D)/aria.c $(CFLAGS)
+	$(CP) aria.o $(BLOCK_D)	
+
+$(BLOCK_D)/aes.o : $(BLOCK_D)/aes.c
+	$(CC) -c $(BLOCK_D)/aes.c $(CFLAGS)
+	$(CP) aes.o $(BLOCK_D)
+$(BLOCK_D)/aes_cbc.o : $(BLOCK_D)/aes_cbc.c
+	$(CC) -c $(BLOCK_D)/aes_cbc.c $(CFLAGS)
+	$(CP) aes_cbc.o $(BLOCK_D)
+$(BLOCK_D)/aes_cfb.o : $(BLOCK_D)/aes_cfb.c
+	$(CC) -c $(BLOCK_D)/aes_cfb.c $(CFLAGS)
+	$(CP) aes_cfb.o $(BLOCK_D)
+$(BLOCK_D)/aes_ctr.o : $(BLOCK_D)/aes_ctr.c
+	$(CC) -c $(BLOCK_D)/aes_ctr.c $(CFLAGS)
+	$(CP) aes_ctr.o $(BLOCK_D)
+$(BLOCK_D)/aes_ecb.o : $(BLOCK_D)/aes_ecb.c
+	$(CC) -c $(BLOCK_D)/aes_ecb.c $(CFLAGS)
+	$(CP) aes_ecb.o $(BLOCK_D)
+$(BLOCK_D)/aes_ofb.o : $(BLOCK_D)/aes_ofb.c
+	$(CC) -c $(BLOCK_D)/aes_ofb.c $(CFLAGS)
+	$(CP) aes_ofb.o $(BLOCK_D)
+	
+$(BLOCK_D)/lea_ofb.o : $(BLOCK_D)/lea_ofb.c
+	$(CC) -c $(BLOCK_D)/lea_ofb.c $(CFLAGS)
+	$(CP) lea_ofb.o $(BLOCK_D)	
+$(BLOCK_D)/lea_ecb.o : $(BLOCK_D)/lea_ecb.c
+	$(CC) -c $(BLOCK_D)/lea_ecb.c $(CFLAGS)
+	$(CP) lea_ecb.o $(BLOCK_D)		
+$(BLOCK_D)/lea_ctr.o : $(BLOCK_D)/lea_ctr.c
+	$(CC) -c $(BLOCK_D)/lea_ctr.c $(CFLAGS)
+	$(CP) lea_ctr.o $(BLOCK_D)			
+$(BLOCK_D)/lea_cfb.o : $(BLOCK_D)/lea_cfb.c
+	$(CC) -c $(BLOCK_D)/lea_cfb.c $(CFLAGS)
+	$(CP) lea_cfb.o $(BLOCK_D)				
+$(BLOCK_D)/lea_cbc.o : $(BLOCK_D)/lea_cbc.c
+	$(CC) -c $(BLOCK_D)/lea_cbc.c $(CFLAGS)
+	$(CP) lea_cbc.o $(BLOCK_D)					
+$(BLOCK_D)/lea.o : $(BLOCK_D)/lea.c
+	$(CC) -c $(BLOCK_D)/lea.c $(CFLAGS)
+	$(CP) lea.o $(BLOCK_D)		
+
+$(BLOCK_D)/seed256.o :  $(BLOCK_D)/seed256.c 
+	$(CC) -c $(BLOCK_D)/seed256.c $(CFLAGS)
+	$(CP) seed256.o $(BLOCK_D)
+$(BLOCK_D)/seed256_cbc.o : $(BLOCK_D)/seed256_cbc.c
+	$(CC) -c $(BLOCK_D)/seed256_cbc.c $(CFLAGS)
+	$(CP) seed256_cbc.o $(BLOCK_D)
+$(BLOCK_D)/seed256_cfb.o : $(BLOCK_D)/seed256_cfb.c 
+	$(CC) -c $(BLOCK_D)/seed256_cfb.c  $(CFLAGS)
+	$(CP) seed256_cfb.o $(BLOCK_D)
+$(BLOCK_D)/seed256_ecb.o : $(BLOCK_D)/seed256_ecb.c 
+	$(CC) -c $(BLOCK_D)/seed256_ecb.c  $(CFLAGS)
+	$(CP) seed256_ecb.o $(BLOCK_D)
+$(BLOCK_D)/seed256_ofb.o : $(BLOCK_D)/seed256_ofb.c 
+	$(CC) -c $(BLOCK_D)/seed256_ofb.c $(CFLAGS)
+	$(CP) seed256_ofb.o $(BLOCK_D)
+$(BLOCK_D)/seed256_ctr.o : $(BLOCK_D)/seed256_ctr.c
+	$(CC) -c $(BLOCK_D)/seed256_ctr.c $(CFLAGS)
+	$(CP) seed256_ctr.o $(BLOCK_D)	
+		
+$(BLOCK_D)/seed.o :  $(BLOCK_D)/seed.c 
+	$(CC) -c $(BLOCK_D)/seed.c $(CFLAGS)
+	$(CP) seed.o $(BLOCK_D)
+$(BLOCK_D)/seed_cbc.o : $(BLOCK_D)/seed_cbc.c
+	$(CC) -c $(BLOCK_D)/seed_cbc.c $(CFLAGS)
+	$(CP) seed_cbc.o $(BLOCK_D)
+$(BLOCK_D)/seed_cfb.o : $(BLOCK_D)/seed_cfb.c 
+	$(CC) -c $(BLOCK_D)/seed_cfb.c  $(CFLAGS)
+	$(CP) seed_cfb.o $(BLOCK_D)
+$(BLOCK_D)/seed_ecb.o : $(BLOCK_D)/seed_ecb.c 
+	$(CC) -c $(BLOCK_D)/seed_ecb.c  $(CFLAGS)
+	$(CP) seed_ecb.o $(BLOCK_D)
+$(BLOCK_D)/seed_ofb.o : $(BLOCK_D)/seed_ofb.c 
+	$(CC) -c $(BLOCK_D)/seed_ofb.c $(CFLAGS)
+	$(CP) seed_ofb.o $(BLOCK_D)
+$(BLOCK_D)/seed_ctr.o : $(BLOCK_D)/seed_ctr.c
+	$(CC) -c $(BLOCK_D)/seed_ctr.c $(CFLAGS)
+	$(CP) seed_ctr.o $(BLOCK_D)	
+	
+$(HASH_D)/lsh256.o : $(HASH_D)/lsh256.c
+	$(CC) -c $(HASH_D)/lsh256.c $(CFLAGS)
+	$(CP) lsh256.o $(HASH_D)
+$(HASH_D)/lsh512.o : $(HASH_D)/lsh512.c
+	$(CC) -c $(HASH_D)/lsh512.c $(CFLAGS)
+	$(CP) lsh512.o $(HASH_D)	
+$(HASH_D)/sha256.o : $(HASH_D)/sha256.c
+	$(CC) -c $(HASH_D)/sha256.c $(CFLAGS)
+	$(CP) sha256.o $(HASH_D)
+$(HASH_D)/sha512.o : $(HASH_D)/sha512.c
+	$(CC) -c $(HASH_D)/sha512.c $(CFLAGS)
+	$(CP) sha512.o $(HASH_D)
+	
+$(MAC_D)/hash_mac.o : $(MAC_D)/hash_mac.c
+	$(CC) -c $(MAC_D)/hash_mac.c $(CFLAGS)
+	$(CP) hash_mac.o $(MAC_D)
+
+$(RAND_D)/rand.o : $(RAND_D)/rand.c
+	$(CC) -c $(RAND_D)/rand.c $(CFLAGS)
+	$(CP) rand.o $(RAND_D)
+$(RAND_D)/rand_sha256.o : $(RAND_D)/rand_sha256.c 
+	$(CC) -c $(RAND_D)/rand_sha256.c $(CFLAGS)
+	$(CP) rand_sha256.o $(RAND_D)
+			
+$(TCL_D)/tnkmscrypto.o : $(TCL_D)/tnkmscrypto.c
+	$(CC) -c $(TCL_D)/tnkmscrypto.c $(CFLAGS)
+	$(CP) tnkmscrypto.o $(TCL_D)			
+
+OBJSCRT = \
+$(SCRT_D)/e_cbc_aes.o \
+$(SCRT_D)/e_cfb_aes.o \
+$(SCRT_D)/e_ctr_aes.o \
+$(SCRT_D)/e_ecb_aes.o \
+$(SCRT_D)/e_ofb_aes.o \
+$(SCRT_D)/e_cbc_aria.o \
+$(SCRT_D)/e_cfb_aria.o \
+$(SCRT_D)/e_ctr_aria.o \
+$(SCRT_D)/e_ecb_aria.o \
+$(SCRT_D)/e_ofb_aria.o \
+$(SCRT_D)/e_cbc_lea.o \
+$(SCRT_D)/e_cfb_lea.o \
+$(SCRT_D)/e_ctr_lea.o \
+$(SCRT_D)/e_ecb_lea.o \
+$(SCRT_D)/e_ofb_lea.o \
+$(SCRT_D)/e_cbc_s256.o \
+$(SCRT_D)/e_cfb_s256.o \
+$(SCRT_D)/e_ctr_s256.o \
+$(SCRT_D)/e_ecb_s256.o \
+$(SCRT_D)/e_ofb_s256.o \
+$(SCRT_D)/e_cbc_s.o \
+$(SCRT_D)/e_cfb_s.o \
+$(SCRT_D)/e_ctr_s.o \
+$(SCRT_D)/e_ecb_s.o \
+$(SCRT_D)/e_ofb_s.o \
+$(SCRT_D)/m_null.o \
+$(SCRT_D)/m_lsh256.o \
+$(SCRT_D)/m_lsh512.o \
+$(SCRT_D)/m_sha256.o \
+$(SCRT_D)/m_sha512.o \
+$(SCRT_D)/scrt_digest.o \
+$(SCRT_D)/scrt_enc.o \
+$(SCRT_D)/scrt_mac.o \
+$(SCRT_D)/scrt_rand.o 
+
+OBJBLOCK = \
+$(BLOCK_D)/aes.o \
+$(BLOCK_D)/aes_cbc.o \
+$(BLOCK_D)/aes_ctr.o \
+$(BLOCK_D)/aes_ecb.o \
+$(BLOCK_D)/aes_ofb.o \
+$(BLOCK_D)/aes_cfb.o \
+$(BLOCK_D)/aria.o \
+$(BLOCK_D)/aria_ofb.o \
+$(BLOCK_D)/aria_ecb.o \
+$(BLOCK_D)/aria_ctr.o \
+$(BLOCK_D)/aria_cfb.o \
+$(BLOCK_D)/aria_cbc.o \
+$(BLOCK_D)/lea.o \
+$(BLOCK_D)/lea_ofb.o \
+$(BLOCK_D)/lea_ecb.o \
+$(BLOCK_D)/lea_ctr.o \
+$(BLOCK_D)/lea_cfb.o \
+$(BLOCK_D)/lea_cbc.o \
+$(BLOCK_D)/seed256.o \
+$(BLOCK_D)/seed256_cbc.o \
+$(BLOCK_D)/seed256_cfb.o \
+$(BLOCK_D)/seed256_ctr.o \
+$(BLOCK_D)/seed256_ecb.o \
+$(BLOCK_D)/seed256_ofb.o \
+$(BLOCK_D)/seed.o \
+$(BLOCK_D)/seed_cbc.o \
+$(BLOCK_D)/seed_cfb.o \
+$(BLOCK_D)/seed_ctr.o \
+$(BLOCK_D)/seed_ecb.o \
+$(BLOCK_D)/seed_ofb.o
+
+OBJHASH = \
+$(HASH_D)/lsh256.o \
+$(HASH_D)/lsh512.o \
+$(HASH_D)/sha256.o \
+$(HASH_D)/sha512.o 
+
+OBJMAC = \
+$(MAC_D)/hash_mac.o
+
+OBJRAND = \
+$(RAND_D)/rand.o \
+$(RAND_D)/rand_sha256.o
+
+OBJTCL = \
+$(TCL_D)/tnkmscrypto.o
+
+clean:
+	rm -f $/*.o
+	rm -f $(SCRT_D)/*.o 
+	rm -f $(BLOCK_D)/*.o
+	rm -f $(HASH_D)/*.o
+	rm -f $(MAC_D)/*.o
+	rm -f $(RAND_D)/*.o
+	rm -f $(TCL_D)/*.o	
+	rm -f ${LIBDIR}/libtnkmscrypto.a
+	rm -f ${LIBDIR}/libtnkmscrypto.so
+
+lib:  ${LIBOBJS}
+	ar r ${LIBDIR}/libtnkmscrypto.a $(LIBOBJS)
+	ld -shared -o ${LIBDIR}/libtnkmscrypto.so $(LIBOBJS) -lc -lm -lpthread
+#	$(CP) $(LIBDIR)/libtnkmscrypto.a lib  
+	rm ./*.o	
+
