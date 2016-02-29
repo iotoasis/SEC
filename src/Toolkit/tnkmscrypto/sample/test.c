@@ -7,8 +7,9 @@
 
 ************************************************/
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #ifdef _MSC_VER
 #include <windows.h>
 #ifdef _DEBUG
