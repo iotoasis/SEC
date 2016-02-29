@@ -251,12 +251,7 @@ extern "C"
 #elif defined(__GNUC__)
 	#define INLINE		inline __attribute__((always_inline))
 	#define ALIGN64		__attribute__ ((aligned(64)))
-#elif defined(__sun) && defined(__SVR4)
-	#define __attribute__(x)
-	#define INLINE 		
-	#define ALIGN64		__attribute__ ((aligned(64)))
 #else
-	#define __attribute__(x)
 	#define INLINE 		__inline
 	#define ALIGN64		__attribute__ ((aligned(64)))
 #endif
@@ -270,16 +265,10 @@ extern "C"
 #elif defined(__GNUC__) && (__GNUC__*100 + __GNUC_MINOR__*10 >= 430)
 	#define bswap64(x) __builtin_bswap64(x)
 	#define bswap32(x) __builtin_bswap32(x) 
-#elif defined(__sun) && defined(__SVR4)
-static U64 bswap64(U64 x) {
-	x = ((x << 8) & 0xFF00FF00FF00FF00ULL) | ((x >> 8) & 0x00FF00FF00FF00FFULL);
-	x = ((x << 16) & 0xFFFF0000FFFF0000ULL) | ((x >> 16) & 0x0000FFFF0000FFFFULL);
-	return (x >> 32) | (x << 32);
-}
-	#define bswap32(x)  (((x)<<24) ^ ((x)>>24)^ (((x)&0xff00)<<8) ^ (((x)&0xff0000)>>8))
+
 //in the other cases
 #else
-static __inline U64 bswap64(U64 x) {
+static __inline U64 bswap64(U64 x){
 	x = ((x << 8) & 0xFF00FF00FF00FF00ULL) | ((x >> 8) & 0x00FF00FF00FF00FFULL);
 	x = ((x << 16) & 0xFFFF0000FFFF0000ULL) | ((x >> 16) & 0x0000FFFF0000FFFFULL);
 	return (x >> 32) | (x << 32);

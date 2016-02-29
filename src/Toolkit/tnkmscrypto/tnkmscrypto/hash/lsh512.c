@@ -194,14 +194,10 @@ INLINE void step2_iv_64(int j, int l, int gamma, int rsigma1, int rsigma2)
 void compress512(LSH512_CTX * state, const U8 * datablock) {
 
 	int j, l;
-	U64 temp_in, temp_out; // for fix invalid address alignment error 
 
 	//message expansion to m[0], m[1]
 	for (l = 0; l < 32; l++){
-		//m[0][l] = U8TO64_LE(datablock + 8 * l);
-		memcpy(&temp_in, datablock + 8 * l, sizeof(U64)); // for fix invalid address alignment error
-		temp_out = U8TO64_LE(&temp_in); // for fix invalid address alignment error
-		m[0][l] = temp_out; // for fix invalid address alignment error
+		m[0][l] = U8TO64_LE(datablock + 8 * l);
 	}
 
 	step0_64(0, 0, 0, 0, 9, 12, state);		step0_64(0, 1, 0, 16, 10, 15, state);

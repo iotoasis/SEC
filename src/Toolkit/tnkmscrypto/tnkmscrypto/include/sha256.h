@@ -14,7 +14,6 @@ typedef struct
     U32 state[8];
     U8 buffer[64];
 	unsigned char xbuffer[104];
-
 }
 SHA256_CTX;
 
