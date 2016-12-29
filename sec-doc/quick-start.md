@@ -79,7 +79,7 @@ CAS 클라이언트 및 툴킷은 다음과 같은 순서로 사용할 수 있다.
 - 툴킷 라이브러리 : libTrustNETCASCstk.so
 
 #### (5) 클라이언트 설정 방법
-- ?	설정은 TrustNetCaClient.conf 파일로 작성되며 CA 읹증서 trustnetcas-rootca.crt와 같은 폴더에 위치시킨 후 초기화 API에 그 경로를 입력한다.
+- 설정은 TrustNetCaClient.conf 파일로 작성되며 CA 인증서 trustnetcas-rootca.crt와 같은 폴더에 위치시킨 후 초기화 API에 그 경로를 입력한다.
 
 casIP=166.104.112.40
 casPort=9005
