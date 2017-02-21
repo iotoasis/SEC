@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="wolfssl">
+</Property><Property Name="솔루션 파일" Value="C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\wolfssl.sln">
+</Property><Property Name="Date" Value="2016년 8월 8일 월요일">
+</Property><Property Name="Time" Value="오전 9:34">
+</Property></Properties><Event ErrorLevel="0" Project="wolfssl" Source="wolfssl.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\wolfssl.vcproj'.">
+</Event><Event ErrorLevel="1" Project="wolfssl" Source="wolfssl.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="wolfssl" Source="wolfssl.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\wolfssl.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="wolfssl" Source="wolfssl.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="testsuite" Source="testsuite\testsuite.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\testsuite\testsuite.vcproj'.">
+</Event><Event ErrorLevel="1" Project="testsuite" Source="testsuite\testsuite.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="testsuite" Source="testsuite\testsuite.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\testsuite\testsuite.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="testsuite" Source="testsuite\testsuite.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="sslSniffer" Source="sslSniffer\sslSniffer.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\sslSniffer\sslSniffer.vcproj'.">
+</Event><Event ErrorLevel="1" Project="sslSniffer" Source="sslSniffer\sslSniffer.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="sslSniffer" Source="sslSniffer\sslSniffer.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="sslSniffer" Source="sslSniffer\sslSniffer.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\sslSniffer\sslSniffer.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="sslSniffer" Source="sslSniffer\sslSniffer.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="echoserver" Source="examples\echoserver\echoserver.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\echoserver\echoserver.vcproj'.">
+</Event><Event ErrorLevel="1" Project="echoserver" Source="examples\echoserver\echoserver.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="echoserver" Source="examples\echoserver\echoserver.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\echoserver\echoserver.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="echoserver" Source="examples\echoserver\echoserver.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="echoclient" Source="examples\echoclient\echoclient.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\echoclient\echoclient.vcproj'.">
+</Event><Event ErrorLevel="1" Project="echoclient" Source="examples\echoclient\echoclient.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="echoclient" Source="examples\echoclient\echoclient.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\echoclient\echoclient.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="echoclient" Source="examples\echoclient\echoclient.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="client" Source="examples\client\client.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\client\client.vcproj'.">
+</Event><Event ErrorLevel="1" Project="client" Source="examples\client\client.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="client" Source="examples\client\client.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\client\client.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="client" Source="examples\client\client.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="server" Source="examples\server\server.vcproj" Description="Converting project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\server\server.vcproj'.">
+</Event><Event ErrorLevel="1" Project="server" Source="examples\server\server.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="server" Source="examples\server\server.vcproj" Description="Done converting to new project file 'C:\Users\hbwoo\Downloads\wolfssl-3.9.8\wolfssl-3.9.8\examples\server\server.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="server" Source="examples\server\server.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="wolfssl.sln" Description="솔루션을 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="" Source="wolfssl.sln" Description="Converted">
+</Event></UpgradeLog>

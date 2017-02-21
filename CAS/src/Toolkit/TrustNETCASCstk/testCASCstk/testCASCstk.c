@@ -19,8 +19,8 @@
 int main(char *argc, char *argv[])
 {
 	int nRet = 0;
-	char szGatewayID[] = "569cfa80a6eb2a0a77668900";
-	char szDeviceID[] = "577e22f7a6eb2aec71371aeb";
+	char szGatewayID[] = "LGU_SmartPlug_111111112";
+	char szDeviceID[] = "LGU_SmartPlug_111111113";
 	char *pAuthKey = NULL;
 	char szModulePath[MAX_PATH] = {0};
 	char *pPos = NULL;
