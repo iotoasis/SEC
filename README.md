@@ -37,7 +37,6 @@ The source codes provided here are about CA-Client and Toolkit. CA-Client is res
 ## Modules
 - KMS/src/Agent takes a role of requesting cryptography key to KMS server and saving it into the local storage.
 - KMS/src/Toolkit takes a role of date encryption/decryption with the cryptography key from Agent.
-- CAS/src/CAClient 는 CAS 서버에 기기인증서 발급을 요청하고 기기인증서를 수신받아 로컬 저장하는 역할을 합니다. 
 - CAS/src/CAClient takes a role of requesting certificate issue to CAS Server and saving it into the local storage.
 - CAS/src/Toolkit takes a role of digital signature for device gateway authentication when the device gateway transmits data from devices to SI server
 
