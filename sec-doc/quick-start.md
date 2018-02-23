@@ -1,38 +1,39 @@
 # Quick Start - KMS
 
-Oasis Security 관련해서 KMS 에이전트 및 툴킷을 처음 접하는 분들이 소스를 다운받고 쉽게 시험할 수 있도록 안내한다.
+For new users to approach KMS agents and toolkits related to Oasis Security, this guide shows how to download the source and test it easily.
 
-KMS 에이전트 및 툴킷은 다음과 같은 순서로 사용할 수 있다.
+KMS agents and toolkits can be used in the following order.
 
-> 1. 라즈비안 다운로드 및 설치
-> 2. 에이전트 및 툴킷 소스 다운로드
-> 3. 에이전트 및 툴킷 소스 빌드
-> 4. 에이전트 및 툴킷 라이브러리 파일
-> 5. 에이전트 설정 방법
+> 1. Download and install Raspbian
+> 2. Download agent and toolkit sources
+> 3. Build the agent and toolkit source
+> 4. Agent and toolkit library files
+> 5. How to set up the agent
+
 
 ## Requirements
 * Raspberrypi
 * Rasbian OS
 
-## 따라하기
+## Follow
 
-#### (1) 라즈비안 다운로드 및 설치
-- [라즈비안 다운로드] (https://www.raspberrypi.org/downloads/raspbian/)
-- [라즈비안 설치안내] (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+#### (1) Download and install RazBian
+- [Raspbian download] (https://www.raspberrypi.org/downloads/raspbian/)
+- [Raspbian Installation Guide] (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-#### (2) 에이전트 및 툴킷 소스 다운로드
-- [릴리즈 페이지](https://github.com/iotoasis/SEC/releases)에서 소스 및 설치관련 파일을 다운받은 후 KMS 폴더의 소스만 사용한다.
+#### (2) Download agent and toolkit sources
+- Download the source and installation files from [Release page](https://github.com/iotoasis/SEC/releases) and use only the source of the KMS folder.
 
-#### (3) 에이전트 및 툴킷 소스 빌드
-- 에이전트 소스 빌드 : Agent 폴더에서 make ?f Makefile.linux.arm 실행
-- 툴킷 소스 빌드 : Toolkit/TrustKeystoreCstk/src 폴더에서 make ?f make.raspberry.32 실행
+#### (3) Build agent and toolkit sources
+- Build agent source : Run make -f Makefile.linux.arm in the Agent folder
+- Build Toolkit Source : Run make -f make.raspberry.32 in the Toolkit/TrustKeystoreCstk/src folder
 
-#### (4) 에이전트 및 툴킷 라이브러리 파일
-- 에이전트 라이브러리 : libTKSAgent.so, libTKSAgent.so, libTKSAgentAdv.so, libTKSAgentLite.so
-- 툴킷 라이브러리 : libTKSCstk.so, libTKSCstkLite.so, libTKSKmsCstk.so, libTKSKmsCstkLite.so
+#### (4) Agent and toolkit library files
+- Agent library : libTKSAgent.so, libTKSAgent.so, libTKSAgentAdv.so, libTKSAgentLite.so
+- Toolkit library : libTKSCstk.so, libTKSCstkLite.so, libTKSKmsCstk.so, libTKSKmsCstkLite.so
 
-#### (5) 에이전트 설정 방법
-- 설정은 TrustKeystoreAgent.conf 파일로 작성되며 CA 인증서 unetsystem-rootca.pem와 같은 폴더에 위치시킨 후 초기화 API에 그 경로를 입력한다. 설정파일은 아래 샘플 설정파일을 사용한다. 
+#### (5) How to set up the agent
+- The settings are created in the TrustKeystoreAgent.conf file, located in the same folder as the CA certificate unetsystem-rootca.pem, and entered in the initialization API. The configuration file uses the sample configuration file shown below.
 
 kmsIP=166.104.112.40
 kmsPort=9002
@@ -47,39 +48,40 @@ Integrity=FpDvNYpuw2kZm11mdAgkmtGgaETFcWCB3kU52VS/uVU=
 
 # Quick Start - CAS
 
-Oasis Security 관련해서 CAS 클라이언트 및 툴킷을 처음 접하는 분들이 소스를 다운받고 쉽게 시험할 수 있도록 안내한다.
+For new users to approach CAS client and toolkit for Oasis Security, this guide shows how to download the source and test it easily.
 
-CAS 클라이언트 및 툴킷은 다음과 같은 순서로 사용할 수 있다.
+The CAS client and toolkit can be used in the following order.
 
-> 1. 라즈비안 다운로드 및 설치
-> 2. 클라이언트 및 툴킷 소스 다운로드
-> 3. 클라이언트 및 툴킷 소스 빌드
-> 4. 클라이언트 및 툴킷 라이브러리 파일
-> 5. 클라이언트 설정 방법
+> 1. Download and install Raspbian
+> 2. Download client and toolkit sources
+> 3. Building client and toolkit sources
+> 4. Client and Toolkit library files
+> 5. How to set up the client
+
 
 ## Requirements
 * Raspberrypi
 * Rasbian OS
 
-## 따라하기
+## Follow
 
-#### (1) 라즈비안 다운로드 및 설치
-- [라즈비안 다운로드] (https://www.raspberrypi.org/downloads/raspbian/)
-- [라즈비안 설치안내] (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+#### (1) Download and install Raspbian
+- [Raspbian download] (https://www.raspberrypi.org/downloads/raspbian/)
+- [Raspbian Installation Guide] (https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-#### (2) 클라이언트 및 툴킷 소스 다운로드
-- [릴리즈 페이지](https://github.com/iotoasis/SEC/releases)에서 소스 및 설치관련 파일을 다운받은 후 CAS 폴더의 소스만 사용한다.
+#### (2) Download client and toolkit sources
+- After downloading the source and installation files from [Release page](https://github.com/iotoasis/SEC/releases), use only the source of the CAS folder.
 
-#### (3) 클라이언트 및 툴킷 소스 빌드
-- 클라이언트 소스 빌드 : ?	CAClient 폴더에서 make 실행
-- 툴킷 소스 빌드 : ?	TrustNETCASCstk 폴더에서 make 실행
+#### (3) Building client and toolkit sources
+- Build client source: Run make in the CAClient folder
+- Toolkit source build: Run make in the TrustNETCASCstk folder
 
-#### (4) 클라이언트 및 툴킷 라이브러리 파일
-- 클라이언트 라이브러리 : libTrustNETCASClient.so
-- 툴킷 라이브러리 : libTrustNETCASCstk.so
+#### (4) Client and toolkit library files
+- Client library : libTrustNETCASClient.so
+- Toolkit library : libTrustNETCASCstk.so
 
-#### (5) 클라이언트 설정 방법
-- 설정은 TrustNetCaClient.conf 파일로 작성되며 CA 인증서 trustnetcas-rootca.crt와 같은 폴더에 위치시킨 후 초기화 API에 그 경로를 입력한다.
+#### (5) How to set up the client
+- The settings are created in the TrustNetCaClient.conf file, located in the same folder as the CA certificate trustnetcas-rootca.crt, and entered in the initialization API.
 
 casIP=166.104.112.40
 casPort=9005
