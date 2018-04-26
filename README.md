@@ -29,7 +29,7 @@ The source codes provided here are about CA-Client and Toolkit. CA-Client is res
 - Supported platforms : Raspberry Pi and the similar device environments
 
 ## Documents
-- [Quick Start](./sec-doc/quick-start.md)
+- [Quick Start](https://github.com/iotoasis/SEC/blob/master/sec-doc/quick-start.md)
 
 ## Downloads
 - [Latest Release](https://github.com/iotoasis/SEC/releases)
